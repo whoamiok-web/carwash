@@ -389,21 +389,46 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .gallery-item {
   aspect-ratio: 4 / 3;
-  background: var(--panel);
+  background-color: var(--panel);
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 18px 18px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  gap: 6px;
   padding: 18px;
-  font-weight: 700;
-  font-size: 1rem;
-  background-image: repeating-linear-gradient(-45deg, var(--panel-2), var(--panel-2) 14px, var(--panel) 14px, var(--panel) 28px);
+  transition: background-color 0.2s;
 }
 
-.gallery-item .code {
+.gallery-item:hover { background-color: var(--panel-2); }
+
+.gallery-icon {
+  flex: 1;
+  width: 100%;
+  max-height: 68%;
+  margin: auto;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.gallery-icon .ic-fill { fill: var(--accent); stroke: none; }
+.gallery-icon .ic-thin { stroke-width: 1.4; }
+
+.gallery-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.gallery-caption .code {
   font-family: "SFMono-Regular", Consolas, monospace;
   color: var(--accent);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   letter-spacing: 0.06em;
 }
 
