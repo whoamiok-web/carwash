@@ -406,60 +406,6 @@ ul { list-style: none; margin: 0; padding: 0; }
   .rate-row-price { font-size: 1rem; }
 }
 
-/* Gallery */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-}
-
-.gallery-item {
-  aspect-ratio: 4 / 3;
-  background-color: var(--panel);
-  background-image:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: 18px 18px;
-  display: flex;
-  flex-direction: column;
-  padding: 18px;
-  transition: background-color 0.2s;
-}
-
-.gallery-item:hover { background-color: var(--panel-2); }
-
-.gallery-icon {
-  flex: 1;
-  width: 100%;
-  max-height: 68%;
-  margin: auto;
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.gallery-icon .ic-fill { fill: var(--accent); stroke: none; }
-.gallery-icon .ic-thin { stroke-width: 1.4; }
-
-.gallery-caption {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-.gallery-caption .code {
-  font-family: "SFMono-Regular", Consolas, monospace;
-  color: var(--accent);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-}
-
 /* Location */
 .location-inner {
   display: grid;
@@ -591,7 +537,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* Responsive */
 @media (max-width: 960px) {
   .hero-inner { grid-template-columns: 1fr; }
-  .spec-grid-3, .spec-grid-4, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .spec-grid-3, .spec-grid-4 { grid-template-columns: repeat(2, 1fr); }
   .location-inner, .contact-inner { grid-template-columns: 1fr; }
 }
 
@@ -616,6 +562,6 @@ ul { list-style: none; margin: 0; padding: 0; }
   .site-header.open .nav { flex-direction: column; gap: 16px; }
   .site-header.open .nav-cta { display: inline-flex; }
 
-  .spec-grid-3, .spec-grid-4, .gallery-grid { grid-template-columns: 1fr; }
+  .spec-grid-3, .spec-grid-4 { grid-template-columns: 1fr; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
 }
