@@ -416,14 +416,52 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .location-map {
   background: var(--panel);
-  border: 1px dashed var(--line-strong);
+  border: 1px solid var(--line);
   height: 300px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 8px;
+  text-align: center;
+  padding: 24px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.location-map:hover {
+  border-color: var(--accent);
+  background: var(--panel-2);
+}
+
+.map-pin {
+  width: 28px;
+  height: 36px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.6;
+  margin-bottom: 4px;
+}
+
+.map-pin circle { fill: var(--accent); stroke: none; }
+
+.map-card-name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.map-card-addr {
+  margin: 0;
   color: var(--ink-dim);
+  font-size: 0.85rem;
+}
+
+.map-card-link {
+  margin-top: 10px;
   font-family: "SFMono-Regular", Consolas, monospace;
-  font-size: 0.9rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
 }
 
 /* Contact */
