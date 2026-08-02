@@ -315,68 +315,58 @@ ul { list-style: none; margin: 0; padding: 0; }
 .spec-card p { color: var(--ink-dim); font-size: 0.87rem; line-height: 1.6; margin: 0; }
 
 /* Pricing */
-.price-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  align-items: stretch;
-}
+.rate-note { margin-bottom: 24px; }
 
-.price-card {
-  position: relative;
-  background: var(--panel);
+.rate-table-wrap {
+  overflow-x: auto;
   border: 1px solid var(--line);
-  padding: 30px 26px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  background: var(--panel);
 }
 
-.price-card.featured { border-color: var(--accent); }
-
-.price-card .badge {
-  position: absolute;
-  top: -13px;
-  left: 26px;
-  background: var(--accent);
-  color: var(--accent-ink);
-  font-family: "SFMono-Regular", Consolas, monospace;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  margin: 0;
+.rate-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+  font-size: 0.9rem;
 }
 
-.price-card .code {
+.rate-table th,
+.rate-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.rate-table td:nth-child(2) { white-space: normal; color: var(--ink-dim); font-size: 0.85rem; }
+
+.rate-table thead th {
   font-family: "SFMono-Regular", Consolas, monospace;
-  color: var(--accent);
   font-size: 0.72rem;
   letter-spacing: 0.08em;
-  margin: 0;
-}
-
-.price-card h3 { margin: 4px 0 0; font-size: 1.1rem; text-transform: uppercase; }
-
-.price-card .amount {
-  font-family: "SFMono-Regular", Consolas, monospace;
-  font-size: 1.7rem;
+  text-transform: uppercase;
   color: var(--accent);
-  margin: 4px 0 14px;
+  background: var(--panel-2);
+  border-bottom: 1px solid var(--line-strong);
 }
 
-.price-card ul {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
+.rate-table tbody tr:last-child td { border-bottom: none; }
+.rate-table tbody tr:hover { background: var(--panel-2); }
+
+.rate-table td:first-child { font-weight: 700; }
+
+.rate-sub {
+  display: block;
+  font-weight: 400;
+  font-size: 0.74rem;
   color: var(--ink-dim);
-  font-size: 0.88rem;
-  margin-bottom: 20px;
-  flex: 1;
 }
 
-.price-card ul li::before { content: "// "; color: var(--accent); font-family: monospace; }
+.rate-table td:nth-child(3),
+.rate-table td:nth-child(4) {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  color: var(--accent);
+}
 
 /* Gallery */
 .gallery-grid {
@@ -563,7 +553,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 /* Responsive */
 @media (max-width: 960px) {
   .hero-inner { grid-template-columns: 1fr; }
-  .spec-grid-3, .spec-grid-4, .price-grid, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .spec-grid-3, .spec-grid-4, .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .location-inner, .contact-inner { grid-template-columns: 1fr; }
 }
 
@@ -588,6 +578,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .site-header.open .nav { flex-direction: column; gap: 16px; }
   .site-header.open .nav-cta { display: inline-flex; }
 
-  .spec-grid-3, .spec-grid-4, .price-grid, .gallery-grid { grid-template-columns: 1fr; }
+  .spec-grid-3, .spec-grid-4, .gallery-grid { grid-template-columns: 1fr; }
+  .rate-table { min-width: 560px; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
 }

@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `이름: ${name}`,
       `연락처: ${phone}`,
       `방문 희망일시: ${date} ${time}`,
-      `희망 서비스: ${service}`,
+      `차종 구분: ${service}`,
       message ? `요청사항: ${message}` : null,
     ].filter(Boolean).join("\n");
 

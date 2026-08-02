@@ -144,48 +144,92 @@
     <div class="container">
       <div class="section-head">
         <div>
-          <p class="tag">RATE SHEET</p>
+          <p class="tag">RATE SHEET · BY VEHICLE CLASS</p>
           <h2>단가표</h2>
         </div>
       </div>
-      <div class="price-grid">
-        <div class="price-card">
-          <p class="code">BASIC</p>
-          <h3>베이직</h3>
-          <p class="amount">15,000원</p>
-          <ul>
-            <li>외부 손세차</li>
-            <li>휠 세척</li>
-            <li>유리 클리닝</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline btn-block">선택하기</a>
-        </div>
-        <div class="price-card featured">
-          <p class="badge">인기</p>
-          <p class="code">STD</p>
-          <h3>스탠다드</h3>
-          <p class="amount">28,000원</p>
-          <ul>
-            <li>베이직 전체 포함</li>
-            <li>실내 진공청소</li>
-            <li>매트 세척</li>
-            <li>발수 코팅</li>
-          </ul>
-          <a href="#contact" class="btn btn-fill btn-block">선택하기</a>
-        </div>
-        <div class="price-card">
-          <p class="code">PREM</p>
-          <h3>프리미엄</h3>
-          <p class="amount">45,000원</p>
-          <ul>
-            <li>스탠다드 전체 포함</li>
-            <li>프리미엄 왁싱</li>
-            <li>실내 살균 소독</li>
-            <li>엔진룸 클리닝</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline btn-block">선택하기</a>
-        </div>
+      <p class="section-desc-left rate-note">차량 크기에 따라 요금이 다르며, 수입차는 별도 요금이 적용됩니다.</p>
+      <div class="rate-table-wrap">
+        <table class="rate-table">
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>차종 예시</th>
+              <th>요금</th>
+              <th>수입차</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>경차</td>
+              <td>모닝, 스파크, 캐스퍼</td>
+              <td>30,000원</td>
+              <td>35,000원</td>
+            </tr>
+            <tr>
+              <td>소형</td>
+              <td>엑센트, 프라이드, 레이, 아베오</td>
+              <td>30,000원</td>
+              <td>35,000원</td>
+            </tr>
+            <tr>
+              <td>준중형</td>
+              <td>아반떼, K3, SM3, i30</td>
+              <td>35,000원</td>
+              <td>40,000원</td>
+            </tr>
+            <tr>
+              <td>중형</td>
+              <td>쏘나타, K5, SM5, SM7, 말리부, 그랜저, K7, K8, G70, G80</td>
+              <td>40,000원</td>
+              <td>45,000원</td>
+            </tr>
+            <tr>
+              <td>대형</td>
+              <td>에쿠스, EQ900, K9, 체어맨, G90</td>
+              <td>45,000원</td>
+              <td>50,000원</td>
+            </tr>
+            <tr>
+              <td>특대형</td>
+              <td>리무진</td>
+              <td>50,000원</td>
+              <td>55,000원</td>
+            </tr>
+            <tr>
+              <td>RV·SUV<br><span class="rate-sub">경형·소형</span></td>
+              <td>스토닉, 코나, XM3, QM3, 셀토스, 베뉴, 니로, 소울</td>
+              <td>40,000원</td>
+              <td>45,000원</td>
+            </tr>
+            <tr>
+              <td>RV·SUV<br><span class="rate-sub">준중형</span></td>
+              <td>투싼, 스포티지, QM5</td>
+              <td>45,000원</td>
+              <td>50,000원</td>
+            </tr>
+            <tr>
+              <td>RV·SUV<br><span class="rate-sub">중형</span></td>
+              <td>싼타페, 쏘렌토, GV70</td>
+              <td>50,000원</td>
+              <td>55,000원</td>
+            </tr>
+            <tr>
+              <td>RV·SUV<br><span class="rate-sub">대형</span></td>
+              <td>베라크루즈, 모하비, 팰리세이드, 트래버스, GV80</td>
+              <td>60,000원</td>
+              <td>65,000원</td>
+            </tr>
+            <tr>
+              <td>대형승합차</td>
+              <td>카니발, 스타렉스, 스타리아</td>
+              <td>70,000원</td>
+              <td>75,000원</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
+      <p class="form-hint">※ 실내 클리닝·광택·코팅 등 추가 옵션 요금은 매장에 문의해 주세요.</p>
     </div>
   </section>
 
@@ -364,11 +408,19 @@
           </div>
         </div>
         <div class="form-row">
-          <label for="service">희망 서비스</label>
+          <label for="service">차종 구분</label>
           <select id="service" name="service">
-            <option value="베이직">베이직</option>
-            <option value="스탠다드">스탠다드</option>
-            <option value="프리미엄">프리미엄</option>
+            <option value="경차">경차</option>
+            <option value="소형">소형</option>
+            <option value="준중형">준중형</option>
+            <option value="중형" selected>중형</option>
+            <option value="대형">대형</option>
+            <option value="특대형">특대형</option>
+            <option value="RV·SUV 경형·소형">RV·SUV 경형·소형</option>
+            <option value="RV·SUV 준중형">RV·SUV 준중형</option>
+            <option value="RV·SUV 중형">RV·SUV 중형</option>
+            <option value="RV·SUV 대형">RV·SUV 대형</option>
+            <option value="대형승합차">대형승합차</option>
           </select>
         </div>
         <div class="form-row">
