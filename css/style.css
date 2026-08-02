@@ -487,6 +487,8 @@ ul { list-style: none; margin: 0; padding: 0; }
   color: #fff;
 }
 
+.footer-biz { font-size: 0.85rem; color: #94a3b8; }
+
 .footer-links { display: flex; gap: 20px; }
 .footer-links a:hover { color: #fff; }
 
