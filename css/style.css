@@ -153,7 +153,50 @@ ul { list-style: none; margin: 0; padding: 0; }
 .btn-outline { background: transparent; color: var(--ink); }
 .btn-outline:hover { border-color: var(--ink); }
 
+.btn-kakao {
+  background: #fee500;
+  color: #191919;
+  border-color: #fee500;
+}
+.btn-kakao:hover { background: #ffe600; }
+
+.kakao-icon {
+  display: inline-block;
+  width: 0.95em;
+  height: 0.8em;
+  background: #191919;
+  border-radius: 60% 60% 60% 8%;
+}
+
 .btn-block { width: 100%; }
+
+/* Kakao panel */
+.kakao-panel {
+  margin-top: 28px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 3px solid #fee500;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kakao-panel-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.kakao-panel-desc {
+  margin: 0;
+  color: var(--ink-dim);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
 
 /* Hero */
 .hero { padding: 72px 0; }
