@@ -486,7 +486,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .location-map {
   position: relative;
   display: block;
-  height: 360px;
+  height: 240px;
   border: 1px solid var(--line);
   overflow: hidden;
   transition: border-color 0.2s;
@@ -649,6 +649,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   .hero-inner { grid-template-columns: 1fr; }
   .spec-grid-3, .spec-grid-4 { grid-template-columns: repeat(2, 1fr); }
   .location-inner, .contact-inner { grid-template-columns: 1fr; }
+  .location-map { height: 200px; }
 }
 
 @media (max-width: 720px) {
