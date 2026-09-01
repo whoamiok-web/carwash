@@ -1,18 +1,15 @@
 const NTFY_TOPIC = "jeonil-cw-4271";
 
-function encodeHeaderText(text) {
-  const base64 = btoa(unescape(encodeURIComponent(text)));
-  return `=?UTF-8?B?${base64}?=`;
-}
-
 function notifyOwner(date, time) {
-  fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
+  fetch("https://ntfy.sh/", {
     method: "POST",
-    headers: {
-      Title: encodeHeaderText("전일 손세차 - 새 예약"),
-      Priority: "high",
-    },
-    body: `새 예약이 들어왔습니다 (${date} ${time}). 예약현황에서 확인하세요.`,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      topic: NTFY_TOPIC,
+      title: "전일 손세차 - 새 예약",
+      message: `새 예약이 들어왔습니다 (${date} ${time}). 예약현황에서 확인하세요.`,
+      priority: 4,
+    }),
   }).catch((err) => console.error("owner notify failed", err));
 }
 
