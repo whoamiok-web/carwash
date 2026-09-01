@@ -1,3 +1,21 @@
+const NTFY_TOPIC = "jeonil-cw-4271";
+
+function encodeHeaderText(text) {
+  const base64 = btoa(unescape(encodeURIComponent(text)));
+  return `=?UTF-8?B?${base64}?=`;
+}
+
+function notifyOwner(date, time) {
+  fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
+    method: "POST",
+    headers: {
+      Title: encodeHeaderText("전일 손세차 - 새 예약"),
+      Priority: "high",
+    },
+    body: `새 예약이 들어왔습니다 (${date} ${time}). 예약현황에서 확인하세요.`,
+  }).catch((err) => console.error("owner notify failed", err));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   if (!form || typeof firebase === "undefined") return;
@@ -86,6 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       note.textContent = `${name}님, ${date} ${time} 예약이 확정되었습니다!`;
+      notifyOwner(date, time);
       form.reset();
       if (unsubscribe) {
         unsubscribe();
