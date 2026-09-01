@@ -616,6 +616,67 @@ ul { list-style: none; margin: 0; padding: 0; }
   .form-row-split { grid-template-columns: 1fr; }
 }
 
+/* Admin */
+.admin-hidden { display: none !important; }
+
+.admin-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+
+.admin-whoami {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.78rem;
+  color: var(--ink-dim);
+}
+
+.admin-login-form {
+  max-width: 420px;
+}
+
+.booking-group { margin-bottom: 32px; }
+
+.booking-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.booking-row:last-child { border-bottom: none; }
+
+.booking-row-time {
+  flex: 0 0 64px;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.booking-row-info { flex: 1; min-width: 0; }
+
+.booking-row-name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.booking-row-meta {
+  margin: 2px 0 0;
+  color: var(--ink-dim);
+  font-size: 0.82rem;
+  overflow-wrap: break-word;
+}
+
+.booking-cancel-btn {
+  flex: 0 0 auto;
+  padding: 8px 16px;
+  font-size: 0.78rem;
+}
+
 /* Footer */
 .site-footer { padding: 40px 0; }
 

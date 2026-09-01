@@ -322,7 +322,7 @@
       <div class="contact-text">
         <p class="tag">BOOK NOW</p>
         <h2>예약 문의</h2>
-        <p class="section-desc-left">날짜·시간을 고르면 예약 내용이 정리되어 카카오톡 채팅으로 연결됩니다.</p>
+        <p class="section-desc-left">날짜와 시간을 고르면 그 자리에서 바로 예약이 확정됩니다. 이미 예약된 시간은 자동으로 표시돼요.</p>
         <div class="kakao-panel">
           <p class="kakao-panel-title"><span class="kakao-icon" aria-hidden="true"></span>바로 채팅하고 싶다면</p>
           <p class="kakao-panel-desc">양식 없이 곧장 1:1 채팅을 시작할 수도 있습니다.</p>
@@ -391,11 +391,9 @@
           <label for="message">요청사항</label>
           <textarea id="message" name="message" rows="3" placeholder="특이사항이 있다면 남겨주세요."></textarea>
         </div>
-        <button type="submit" class="btn btn-kakao btn-block">
-          <span class="kakao-icon" aria-hidden="true"></span>카카오톡으로 예약 보내기
-        </button>
+        <button type="submit" class="btn btn-fill btn-block">예약하기</button>
         <p class="form-note" id="formNote"></p>
-        <p class="form-hint">⚠️ 예약 확정 전 <strong>같은 시간대 중복 여부는 사장님이 채팅에서 직접 확인</strong>합니다. 확정 답장을 받기 전까지는 예약이 완료된 것이 아닙니다.</p>
+        <p class="form-hint">이미 예약된 시간대는 자동으로 <strong>선택할 수 없게 표시</strong>되며, 제출과 동시에 실시간으로 예약이 확정됩니다.</p>
       </form>
     </div>
   </section>
@@ -415,11 +413,16 @@
       <a href="#pricing">단가표</a>
       <a href="#parking">주차요금</a>
       <a href="#contact">예약문의</a>
+      <a href="admin.html">관리자</a>
     </div>
     <div class="stamp">Certified Hand Wash</div>
   </div>
 </footer>
 
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/booking.js"></script>
 <script src="js/main.js?v=20260802f"></script>
 </body>
 </html>
